@@ -15,6 +15,7 @@ apt-get install libnet-sftp-foreign-perl libxml-simple-perl gpg tar
 Installation
 ------------
 * Import the public key to gpg: `gpg --import encrypt-key.txt`
+* Find out the ID of GPG key `gpg --list-keys` `pub   4096R/997AA45D 2013-09-06` => `997AA45D`
 * Add a cronjob
 
 ```
