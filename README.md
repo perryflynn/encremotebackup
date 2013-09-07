@@ -3,8 +3,10 @@ a tar archive, encrypt the tar with gpg and upload the encrypted tar to another 
 
 Dependencies
 ------------
-* Net::SFTP::Foreign
-* XML::Simple
+* tar
+* gpg
+* Perl Module `Net::SFTP::Foreign`
+* Perl Module `XML::Simple`
 
 ```
 apt-get install libnet-sftp-foreign-perl libxml-simple-perl gpg tar
