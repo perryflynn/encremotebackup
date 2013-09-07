@@ -5,8 +5,18 @@ Dependencies
 ------------
 * Net::SFTP::Foreign
 * XML::Simple
+
 ```
-apt-get install libnet-sftp-foreign-perl libxml-simple-perl
+apt-get install libnet-sftp-foreign-perl libxml-simple-perl gpg tar
+```
+
+Installation
+------------
+* Import the public key to gpg: `gpg --import encrypt-key.txt`
+* Add a cronjob
+```
+# m h  dom mon dow   command
+00 02 * * * /home/encremotebackup/encremotebackup.pl -f my-backup.xml
 ```
 
 Configuration in XML
