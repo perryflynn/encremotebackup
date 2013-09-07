@@ -14,6 +14,7 @@ Installation
 ------------
 * Import the public key to gpg: `gpg --import encrypt-key.txt`
 * Add a cronjob
+
 ```
 # m h  dom mon dow   command
 00 02 * * * /home/encremotebackup/encremotebackup.pl -f my-backup.xml
