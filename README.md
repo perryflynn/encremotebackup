@@ -1,15 +1,19 @@
-This scripts download the specifed folder with SFTP, creates 
-a tar archive, encrypt the tar with gpg and upload the encrypted tar to another SFTP Account.
+encremotebackup.pl download the specifed folder with SFTP, creates 
+a tar archive, encrypt the tar with gpg and upload the encrypted tar to another SFTP account.
+
+remotegpgsqlbackup.pl creates dumps of mysql databases, creates 
+a tar archive, encrypt the tar with gpg and upload the encrypted tar to a SFTP account.
 
 Dependencies
 ------------
 * tar
 * gpg
+* mysqldump
 * Perl Module `Net::SFTP::Foreign`
 * Perl Module `XML::Simple`
 
 ```
-apt-get install libnet-sftp-foreign-perl libxml-simple-perl gpg tar
+apt-get install libnet-sftp-foreign-perl libxml-simple-perl gpg tar mysql-client
 ```
 
 Installation
@@ -55,5 +59,53 @@ The configuration of a backup is specifed in xml.
       <!--keyfile>...</keyfile-->
       <directory>/mycustomernumber/the-name-of-backup/</directory>
    </destination>
+</connection>
+```
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<connection>
+   <name>sql-mydatabaseserver</name>
+   <publickey>997AA45D</publickey>
+   
+   <!-- 3 Months -->
+   <maxageinhours>2160</maxageinhours>
+
+   <destination>
+      <hostname>my.cool-backupspace.com</hostname>
+      <port>22</port>
+      <username>my-user-account</username>
+      <password>mypw</password>
+      <!--keyfile>...</keyfile-->
+      <directory>/my-user-account/sql-mydatabaseserver/</directory>
+   </destination>
+   
+   <hostname>any.sqlhost.com</hostname>
+   <port>3306</port>
+   
+   <databases>
+      
+      <database>
+         <displayname>database-01</displayname>
+         <database>d0931478</database>
+         <username>d0931478</username>
+         <password>fooooopw</password>
+      </database>
+      
+      <database>
+         <displayname>database-02</displayname>
+         <database>d0931477</database>
+         <username>d0931477</username>
+         <password>fooooopw</password>
+      </database>
+      
+      <database>
+         <displayname>database-03</displayname>
+         <database>d0931476</database>
+         <username>d0931476</username>
+         <password>fooooopw</password>
+      </database>
+      
+   </databases>
 </connection>
 ```

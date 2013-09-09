@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<connection>
+   <name>sql-mydatabaseserver</name>
+   <publickey>997AA45D</publickey>
+   
+   <!-- 3 Months -->
+   <maxageinhours>2160</maxageinhours>
+
+   <destination>
+      <hostname>my.cool-backupspace.com</hostname>
+      <port>22</port>
+      <username>my-user-account</username>
+      <password>mypw</password>
+      <!--keyfile>...</keyfile-->
+      <directory>/my-user-account/sql-mydatabaseserver/</directory>
+   </destination>
+   
+   <hostname>any.sqlhost.com</hostname>
+   <port>3306</port>
+   
+   <databases>
+      
+      <database>
+         <displayname>database-01</displayname>
+         <database>d0931478</database>
+         <username>d0931478</username>
+         <password>fooooopw</password>
+      </database>
+      
+      <database>
+         <displayname>database-02</displayname>
+         <database>d0931477</database>
+         <username>d0931477</username>
+         <password>fooooopw</password>
+      </database>
+      
+      <database>
+         <displayname>database-03</displayname>
+         <database>d0931476</database>
+         <username>d0931476</username>
+         <password>fooooopw</password>
+      </database>
+      
+   </databases>
+</connection>
+
