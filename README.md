@@ -1,7 +1,7 @@
 encremotebackup.pl download the specifed folder with SFTP, creates 
 a tar archive, encrypt the tar with gpg and upload the encrypted tar to another SFTP account.
 
-remotegpgsqlbackup.pl creates dumps of mysql databases, creates 
+encremotesqlbackup.pl creates dumps of mysql databases, creates 
 a tar archive, encrypt the tar with gpg and upload the encrypted tar to a SFTP account.
 
 Dependencies
@@ -29,6 +29,7 @@ Installation
 ```
 # m h  dom mon dow   command
 00 02 * * * /home/encremotebackup/encremotebackup.pl -f my-backup.xml
+00 03 * * * /home/encremotebackup/encremotesqlbackup.pl -f sql-my-backup.xml
 ```
 
 Configuration in XML
