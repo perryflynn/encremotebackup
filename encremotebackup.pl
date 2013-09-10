@@ -6,7 +6,7 @@
 # License: GPL Version 3, see License.txt
 #
 
-# Debian dependencies: libnet-sftp-foreign-perl libxml-simple-perl
+# Debian dependencies: libnet-sftp-foreign-perl libxml-simple-perl gpg tar
 
 use strict; 
 use warnings; 
