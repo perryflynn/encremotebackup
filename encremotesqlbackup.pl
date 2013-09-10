@@ -100,6 +100,12 @@ foreach my $db ( @dbs ) {
    print datestring()." Encrypt...\n";
    my $ecmd = "gpg --trust-model always --batch --yes --encrypt --recipient ".$tree->{publickey}." \"".$tmpfolder.$filename.".tar.gz\"";
    system($ecmd);
+
+   print "\n";
+   my @info = stat($tmpfolder.$filename.".tar.gz.gpg");
+   print "Filename: ".$filename.".tar.gz.gpg\n";
+   print "Size: ".($info[7]/1024/1024)."MB\n";
+   print "\n";
    
    # Upload
    print datestring()." Upload...\n";
@@ -130,4 +136,3 @@ foreach my $file ( @{ $filelist } ){
 $sftptarget->disconnect();
 
 # EOF
-
