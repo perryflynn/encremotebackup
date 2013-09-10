@@ -122,3 +122,5 @@ The configuration of a backup is specifed in xml.
    </databases>
 </connection>
 ```
+
+EOF
