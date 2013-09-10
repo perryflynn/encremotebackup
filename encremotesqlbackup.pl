@@ -1,6 +1,12 @@
 #!/usr/bin/perl
 
-# Debian dependencies: libnet-sftp-foreign-perl libxml-simple-perl
+#
+# This script creates encrypted backups of MySQL databases
+# Script by Christian Blechert (christian@blechert.name)
+# License: GPL Version 3, see License.txt
+#
+
+# Debian dependencies: libnet-sftp-foreign-perl libxml-simple-perl tar gpg mysqldump
 
 use strict; 
 use warnings; 
