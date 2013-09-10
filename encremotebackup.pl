@@ -1,5 +1,11 @@
 #!/usr/bin/perl
 
+#
+# This script creates encrypted backups of SFTP locations
+# Script by Christian Blechert (christian@blechert.name)
+# License: GPL Version 3, see License.txt
+#
+
 # Debian dependencies: libnet-sftp-foreign-perl libxml-simple-perl
 
 use strict; 
