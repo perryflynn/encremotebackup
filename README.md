@@ -7,13 +7,13 @@ a tar archive, encrypt the tar with gpg and upload the encrypted tar to a SFTP a
 Dependencies
 ------------
 * tar
-* gpg
+* gnupg
 * mysqldump
 * Perl Module `Net::SFTP::Foreign`
 * Perl Module `XML::Simple`
 
 ```
-apt-get install libnet-sftp-foreign-perl libxml-simple-perl gpg tar mysql-client
+apt-get install libnet-sftp-foreign-perl libxml-simple-perl gnupg tar mysql-client
 ```
 
 Installation
